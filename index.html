@@ -182,11 +182,42 @@ font-size : 0.5 rem;
 	
 	<section id = "mypayout">
 	<div id = "mymiddle">
+	
 	<h1>How To pay</h1>
-	<p>1.Click Pay button,Once you reach the Pay Page Click "Go to Checkout/add to bag" .<br></p><img src ="images/Go to.png" width="300px"><br><hr>
-	<p>2.Put your email address and Select Checkout Not paypal if you want to pay through your Card .<br></p><img src ="images/checkout.png" width="300px"><br><hr>
-	<p>fill in your information.Note after Thank You page get ready to play in 7 seconds dont go anywhere or your time will decrease.<br></p><img src ="images/insert info.png" width="300px"><br><hr>	
-	<button id="mypay">pay<br>R5/day<br>0,3$</button>
+	
+	<p>Select debit or Credit to pay using your card.NOTE Your information is highly secured BY PayPal .<br></p><br><hr>
+
+	
+	<p>Please make sure "shipping same as billing address is DISABLED" .<br></p><img src ="images/disable.png" width="500px"><br><hr>
+	<p>Fee is 0,28$ = R5 .<br></p><br><hr>
+
+	<br>
+	<br>
+	
+	<div id="paypal-button-container-P-0P861425B6790881DM5TJ2AI"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AcZRyJIuXljQTsx_yeC_lecLXsN5sr0oUJ2wy4FvBVolspzYQ-UewN7-A1N9FvNp5QnC46SdEFfY5kxI&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-0P861425B6790881DM5TJ2AI'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-0P861425B6790881DM5TJ2AI'); // Renders the PayPal button
+</script>
+
+<br>
+<br>
 	</div>
 	</section>
 	
